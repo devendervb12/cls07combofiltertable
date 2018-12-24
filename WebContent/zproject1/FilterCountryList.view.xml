@@ -1,0 +1,42 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="zproject1.FilterCountryList" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+	         <ComboBox id="combo" items="{/}" selectionChange="onSelectionChange">
+	            <items>
+	               <core:Item text="{name}"/>
+	            </items>
+	         </ComboBox>
+	           <Table items="{/Customers}" visible="false"
+	           id="idTable"
+	           >
+	          <columns>
+	              <Column>
+	                 <header>
+	                    <Text text="Customer ID"/>
+	                 </header>
+	              </Column>
+	              <Column>
+	                 <header>
+	                    <Text text="Contact Title"/>
+	                 </header>
+	              </Column>
+	              <Column>
+	                 <header>
+	                    <Text text="City"/>
+	                 </header>
+	              </Column>
+	          </columns>
+	          <items>
+	             <ColumnListItem>
+	                  <cells>
+	                       <Text text="{CustomerID}"/>
+	                       <Text text="{ContactTitle}"/>
+	                       <Text text="{City}"/>
+	                  </cells>
+	             </ColumnListItem>
+	          </items>
+	       </Table>
+		</content>
+	</Page>
+</core:View>
